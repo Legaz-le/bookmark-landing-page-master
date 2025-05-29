@@ -1,7 +1,6 @@
 import React from 'react'
-import "index.css"
 
-const App = () => {
+const Features = () => {
   return (
     <div>
       
@@ -9,5 +8,4 @@ const App = () => {
   )
 }
 
-export default App
-
+export default Features
