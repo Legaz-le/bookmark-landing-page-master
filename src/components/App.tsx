@@ -3,6 +3,7 @@ import Header from './Header'
 import Features from './Features'
 import Pricing from "./Pricing"
 import Faqs from "./Faqs"
+import Contackt from "./Contackt"
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Features />
       <Pricing/>
       <Faqs />
+      <Contackt />
       
     </div>
   )
