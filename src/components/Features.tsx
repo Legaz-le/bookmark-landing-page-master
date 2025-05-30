@@ -1,6 +1,6 @@
 const Features = () => {
   return (
-    <section className="flex-col flex items-center justify-center pt-20-pb-20">
+    <section className="flex-col flex items-center justify-center pt-20-pb-20 ">
       <div className="max-w-2xl px-6 text-center mb-12">
         <h2 className="text-3xl  font-display mb-4 font-[500] text-Blue-950">
           Features
@@ -13,14 +13,14 @@ const Features = () => {
       </div>
       <div className="w-full max-w-6xl mx-auto flex-col  flex mb-12">
         <div className="flex flex-wrap gap-6 md:gap-16  font-display mb-8  justify-center ">
-          <a className="relative pb-4 cursor-pointer  ">
+          <a className="relative pb-4 cursor-pointer ">
             Simple Bookmarking
             <div className="absolute -bottom-8 -left-10 w-55 h-1 bg-Red-400 rounded"></div>
           </a>
-          <a className="pb-4 cursor-pointer text-gray-400 hover:text-Blue-950 transition-colors">
+          <a className="pb-4 cursor-pointer text-gray-400 hover:text-Red-400 transition-colors">
             Speedy Searching
           </a>
-          <a className="pb-4 cursor-pointer text-gray-400 hover:text-Blue-950 transition-colors">
+          <a className="pb-4 cursor-pointer text-gray-400 hover:text-Red-400 transition-colors">
             Easy Sharing
           </a>
         </div>
@@ -59,7 +59,7 @@ const Features = () => {
               interface gives you complete control over how you manage your
               favourite sites.
             </p>
-            <button className="bg-Blue-600 text-white px-6 py-3 rounded font-display">
+            <button className="bg-Blue-600 text-white px-6 py-3 rounded font-display cursor-pointer hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300">
               More Info
             </button>
           </div>

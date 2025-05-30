@@ -28,7 +28,7 @@ const Pricing = () => {
             className="w-full "
           />
           </div>
-          <button className="w-5/6 py-3 bg-Blue-600 text-white rounded-md font-display hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300">Add & Install Extension</button>
+          <button className="w-5/6 py-3 bg-Blue-600 text-white rounded-md font-display hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300 cursor-pointer">Add & Install Extension</button>
         </div>
         <div className="max-w-xs w-full flex flex-col items-center rounded-2xl shadow-lg pt-8 pb-6 mt-10 md:mt-16 relative z-20">
           <img
@@ -41,7 +41,7 @@ const Pricing = () => {
           <div className="w-full py-4">
           <img src="/src/assets/images/bg-dots.svg" alt="dots" className="w-full" />
           </div>
-          <button className="w-5/6 py-3 bg-Blue-600 text-white rounded-md font-display hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300">Add & Install Extension</button>
+          <button className="w-5/6 py-3 bg-Blue-600 text-white rounded-md font-display hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300 cursor-pointer">Add & Install Extension</button>
         </div>
         <div className="max-w-xs w-full  flex flex-col  items-center rounded-2xl shadow-lg pt-8 pb-6 mt-20 md:mt-32 relative z-30">
           <img
@@ -58,7 +58,7 @@ const Pricing = () => {
             className="w-full"
           />
           </div>
-          <button className="w-5/6 py-3 bg-Blue-600 text-white rounded-md font-display hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300">Add & Install Extension</button>
+          <button className="w-5/6 py-3 bg-Blue-600 text-white rounded-md font-display hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300 cursor-pointer">Add & Install Extension</button>
         </div>
       </div>
     </section>
