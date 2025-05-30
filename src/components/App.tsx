@@ -2,6 +2,7 @@ import "../index.css"
 import Header from './Header'
 import Features from './Features'
 import Pricing from "./Pricing"
+import Faqs from "./Faqs"
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
       <Header/>
       <Features />
       <Pricing/>
+      <Faqs />
       
     </div>
   )
