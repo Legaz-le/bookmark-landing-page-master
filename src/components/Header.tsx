@@ -3,7 +3,7 @@ const Header = () => {
     <header>
       <nav className="flex align-center justify-between  mt-10 mb-20 pr-25">
         <img src="/src/assets/images/logo-bookmark.svg" alt="logo-bookmark" />
-        <div className="flex gap-9 font-display uppercase">
+        <div className="flex gap-9 font-display uppercase font-[400]">
           <a>Features</a>
           <a>Pricing</a>
           <a>Contact</a>
@@ -12,7 +12,7 @@ const Header = () => {
       </nav>
       <section className=" flex flex-col lg:flex-row items-center gap-8 pb-20">
         <div className="flex-1">
-          <h1 className="text-5xl font-[500] mb-5">A Simple Bookmark Manager</h1>
+          <h1 className="text-5xl font-[500] mb-5 text-Blue-950">A Simple Bookmark Manager</h1>
           <p className="text-xl mt-5 mb-5 text-gray-400 font-[400]">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly.Try it for

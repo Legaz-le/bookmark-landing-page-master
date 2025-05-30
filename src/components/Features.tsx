@@ -2,7 +2,7 @@ const Features = () => {
   return (
     <section className="flex-col flex items-center justify-center pt-20-pb-20">
       <div className="max-w-2xl px-6 text-center mb-12">
-        <h2 className="text-3xl  font-display mb-4 font-[500]">
+        <h2 className="text-3xl  font-display mb-4 font-[500] text-Blue-950">
           Features
         </h2>
         <p className="text-gray-400 font-[400] font-display text-lg  leading-relaxed">
