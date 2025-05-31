@@ -1,7 +1,27 @@
+import React, { useState, useEffect } from "react";
+
+
 const Features = () => {
+  const [activeTab, setActiveTab] = useState("simple");
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const tabs = [
+    { id: "simple", label: "Simple Bookmarking" },
+    { id: "speedy", label: "Speedy Searching" },
+    { id: "easy", label: "Easy Sharing" },
+  ];
+  
+
+  // Animation trigger
+  useEffect(() => {
+    setIsAnimating(true);
+    const timer = setTimeout(() => setIsAnimating(false), 500);
+    return () => clearTimeout(timer);
+  }, [activeTab]);
+
   return (
-    <section className="flex-col flex items-center justify-center pt-20-pb-20 ">
-      <div className="max-w-2xl px-6 text-center mb-12">
+    <section className="flex-col flex items-center justify-center pt-20-pb-20  intersect:motion-preset-slide-up intersect:delay-100">
+      <div className="max-w-2xl px-6 text-center mb-12   intersect:motion-preset-slide-up">
         <h2 className="text-3xl  font-display mb-4 font-[500] text-Blue-950">
           Features
         </h2>
@@ -11,64 +31,122 @@ const Features = () => {
           them on the go.
         </p>
       </div>
-      <div className="w-full max-w-6xl mx-auto flex-col  flex mb-12">
+      <div className="w-full max-w-6xl mx-auto flex-col  flex mb-12  intersect:motion-preset-slide-up">
         <div className="flex flex-wrap gap-6 md:gap-16  font-display mb-8  justify-center ">
-          <a className="relative pb-4 cursor-pointer ">
-            Simple Bookmarking
-            <div className="absolute -bottom-8 -left-10 w-55 h-1 bg-Red-400 rounded"></div>
-          </a>
-          <a className="pb-4 cursor-pointer text-gray-400 hover:text-Red-400 transition-colors">
-            Speedy Searching
-          </a>
-          <a className="pb-4 cursor-pointer text-gray-400 hover:text-Red-400 transition-colors">
-            Easy Sharing
-          </a>
+          {tabs.map((tab) => (
+            <div
+              key={tab.id}
+              className="relative pb-4 cursor-pointer"
+              onClick={() => setActiveTab(tab.id)}
+            >
+              <span
+                className={`transition-colors duration-300  ${
+                  activeTab === tab.id
+                    ? "text-Blue-950 font-medium "
+                    : "text-gray-400 hover:text-Red-400  "
+                }`}
+              >
+                {tab.label}
+              </span>
+
+              {/* Animated indicator */}
+              <div
+                className={`absolute -bottom-8 left-0 h-1 bg-Red-400 rounded transition-all duration-300 ${
+                  activeTab === tab.id ? "w-full opacity-100" : "w-0 opacity-0"
+                }`}
+              />
+            </div>
+          ))}
         </div>
-         <div className="w-full flex justify-center">
-        <div className="border-b border-gray-200  w-148 flex justify-center "/>
+        <div className="w-full flex justify-center ">
+          <div className="border-b border-gray-200  w-148 flex justify-center " />
         </div>
       </div>
       <div className="flex flex-col lg:flex-row items-center gap-8 pb-20">
-        <div className="flex-1 relative ">
+        <div className="flex-1 relative intersect:motion-preset-slide-right ">
           <div className="relative z-10">
-            <img
-              src="/src/assets/images/illustration-features-tab-1.svg"
-              alt="features-1"
-              className=""
-            />
+            <div
+              className={`transition-all duration-500 ${
+                isAnimating ? "opacity-0 scale-95" : "opacity-100 scale-100"
+              }`}
+            >
+              {activeTab === "simple" && (
+                <img
+                  src="/src/assets/images/illustration-features-tab-1.svg"
+                  alt="Simple Bookmarking"
+                  className="w-full max-w-md mx-auto"
+                />
+              )}
+              {activeTab === "speedy" && (
+                <img
+                  src="/src/assets/images/illustration-features-tab-2.svg"
+                  alt="Speedy Searching"
+                  className="w-full max-w-md mx-auto"
+                />
+              )}
+              {activeTab === "easy" && (
+                <img
+                  src="/src/assets/images/illustration-features-tab-3.svg"
+                  alt="Easy Searching"
+                  className="w-full max-w-md mx-auto"
+                />
+              )}
+              <div className="absolute -bottom-15 -left-10 w-120 h-70 bg-Blue-600 rounded-e-full -z-10" />
+            </div>
           </div>
-          <img
-            src="/src/assets/images/illustration-features-tab-2.svg"
-            alt="features-2"
-            className="hidden"
-          />
-          <img
-            src="/src/assets/images/illustration-features-tab-3.svg"
-            alt="features-3"
-            className="hidden"
-          />
-          <div className="absolute -bottom-15 -left-18 w-135 h-82 bg-Blue-600 rounded-e-full -z-10" />
         </div>
-        <div className="flex-1 ">
-          <div className="p-13">
-            <h3 className="text-3xl md:text-3xl font-display font-medium mb-6">
-              Bookmark in one click
-            </h3>
-            <p className="text-gray-400 font-display text-[1.1rem] leading-relaxed mb-8">
-              Organize your bookmarks however you like. Our simple drag-and-drop
-              interface gives you complete control over how you manage your
-              favourite sites.
-            </p>
-            <button className="bg-Blue-600 text-white px-6 py-3 rounded font-display cursor-pointer hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300">
-              More Info
-            </button>
-          </div>
-          <div className="hidden">
-            Intelligent search Our powerful search feature will help you find
-            saved sites in no time at all. No need to trawl through all of your
-            bookmarks. More Info Share your bookmarks Easily share your
-            bookmarks and collections with others. Create a shareable link that
-            you can send at the click of a button. More Info
+        <div className="flex-1 intersect:motion-preset-slide-left ">
+          <div className="text-center lg:text-left">
+            <div
+              className={`transition-all duration-500  ${
+                isAnimating
+                  ? "opacity-0 scale-95"
+                  : "opacity-100 scale-100"
+              }`}
+            >
+              {activeTab === "simple" && (
+                <>
+                  <h3 className="text-3xl md:text-3xl font-display font-medium mb-6 text-Blue-950">
+                    Bookmark in one click
+                  </h3>
+                  <p className="text-gray-400 font-display text-[1.1rem] leading-relaxed mb-8">
+                    Organize your bookmarks however you like. Our simple
+                    drag-and-drop interface gives you complete control over how
+                    you manage your favourite sites.
+                  </p>
+                </>
+              )}
+              {activeTab === "speedy" && (
+                <>
+                  <h3 className="text-3xl md:text-4xl font-display font-medium mb-6 text-blue-950 ">
+                    Intelligent search
+                  </h3>
+                  <p className="text-gray-400 font-display text-lg leading-relaxed mb-8">
+                    Our powerful search feature will help you find saved sites
+                    in no time. No need to trawl through all of your bookmarks.
+                  </p>
+                </>
+              )}
+              {activeTab === "easy" && (
+                <>
+                  <h3 className="text-3xl md:text-4xl font-display font-medium mb-6 text-blue-950">
+                    Share your bookmarks
+                  </h3>
+                  <p className="text-gray-400 font-display text-lg leading-relaxed mb-8">
+                    Easily share your bookmarks and collections with others.
+                    Create a shareable link that you can send at the click of a
+                    button.
+                  </p>
+                </>
+              )}
+              <button className={`bg-Blue-600 text-white px-6 py-3 rounded-md font-display shadow-md
+               hover:bg-white hover:text-Blue-600 hover:border-2 hover:border-Blue-600 transition-all
+               ${
+                  isAnimating ? 'opacity-0' : 'opacity-100 '
+                }`}>
+                More Info
+              </button>
+            </div>
           </div>
         </div>
       </div>

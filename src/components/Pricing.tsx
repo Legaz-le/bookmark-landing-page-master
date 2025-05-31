@@ -1,7 +1,7 @@
 const Pricing = () => {
   return (
-    <section className="flex-col flex items-center justify-center pt-30 pb-20">
-      <div className="max-w-2xl px-15 text-center mb-12">
+    <section className="flex-col flex items-center justify-center pt-30 pb-20 ">
+      <div className="max-w-2xl px-15 text-center mb-12 intersect:motion-preset-slide-up intersect:delay-300">
         <h2 className="text-3xl  font-display mb-4 font-[500] text-Blue-950">
           Download the extension
         </h2>
@@ -11,7 +11,7 @@ const Pricing = () => {
         </p>
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6 px-4">
-        <div className="max-w-xs w-full  flex flex-col  items-center rounded-2xl shadow-lg pt-8 pb-6 relative z-20">
+        <div className="max-w-xs w-full  flex flex-col  items-center rounded-2xl shadow-lg pt-8 pb-6 relative z-20 intersect:motion-preset-slide-up motion-delay-100">
           <img
             src="/src/assets/images/logo-chrome.svg"
             alt="logo-chrome"
@@ -30,7 +30,7 @@ const Pricing = () => {
           </div>
           <button className="w-5/6 py-3 bg-Blue-600 text-white rounded-md font-display hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300 cursor-pointer">Add & Install Extension</button>
         </div>
-        <div className="max-w-xs w-full flex flex-col items-center rounded-2xl shadow-lg pt-8 pb-6 mt-10 md:mt-16 relative z-20">
+        <div className="max-w-xs w-full flex flex-col items-center rounded-2xl shadow-lg pt-8 pb-6 mt-10 md:mt-16 relative z-20 intersect:motion-preset-slide-up motion-delay-200">
           <img
             src="/src/assets/images/logo-firefox.svg"
             alt="logo-firefox"
@@ -43,7 +43,7 @@ const Pricing = () => {
           </div>
           <button className="w-5/6 py-3 bg-Blue-600 text-white rounded-md font-display hover:bg-white hover:text-blue-600 border-2 border-transparent hover:border-blue-600 transition-all duration-300 cursor-pointer">Add & Install Extension</button>
         </div>
-        <div className="max-w-xs w-full  flex flex-col  items-center rounded-2xl shadow-lg pt-8 pb-6 mt-20 md:mt-32 relative z-30">
+        <div className="max-w-xs w-full  flex flex-col  items-center rounded-2xl shadow-lg pt-8 pb-6 mt-20 md:mt-32 relative z-30 intersect:motion-preset-slide-up motion-delay-300">
           <img
             src="/src/assets/images/logo-opera.svg"
             alt="logo-opera"

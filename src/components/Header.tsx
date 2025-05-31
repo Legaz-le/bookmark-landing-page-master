@@ -10,8 +10,8 @@ const Header = () => {
           <a className="hover:text-Red-400 cursor-pointer transition-colors">Login</a>
         </div>
       </nav>
-      <section className=" flex flex-col lg:flex-row items-center gap-8 pb-20">
-        <div className="flex-1">
+      <section className=" flex flex-col lg:flex-row items-center gap-8 pb-20 ">
+        <div className="flex-1 intersect:motion-preset-slide-right intersect:delay-100">
           <h1 className="text-5xl font-[500] mb-5 text-Blue-950">A Simple Bookmark Manager</h1>
           <p className="text-xl mt-5 mb-5 text-gray-400 font-[400]">
             A clean and simple interface to organize your favourite websites.
@@ -27,7 +27,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-        <div className="flex-1 relative inline-block">
+        <div className="flex-1 relative inline-block intersect:motion-preset-slide-left intersect:delay-100 ">
         <img src="/src/assets/images/illustration-hero.svg" alt="hero"/>
         <div className="absolute -bottom-2 -right-10 w-100 h-65 bg-Blue-600 rounded-s-full -z-10"/>
         </div>
