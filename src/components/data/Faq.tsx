@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const FaqSection = () => {
   // Fix the state type to allow string or null

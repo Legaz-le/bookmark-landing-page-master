@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 
 
 const Features = () => {
@@ -20,7 +20,7 @@ const Features = () => {
   }, [activeTab]);
 
   return (
-    <section className="flex-col flex items-center justify-center pt-20-pb-20  intersect:motion-preset-slide-up intersect:delay-100">
+    <section className="flex-col flex items-center justify-center pt-20 -pb-20  intersect:motion-preset-slide-up intersect:delay-100">
       <div className="max-w-2xl px-6 text-center mb-12   intersect:motion-preset-slide-up">
         <h2 className="text-3xl  font-display mb-4 font-[500] text-Blue-950">
           Features
@@ -32,8 +32,10 @@ const Features = () => {
         </p>
       </div>
       <div className="w-full max-w-6xl mx-auto flex-col  flex mb-12  intersect:motion-preset-slide-up">
-        <div className="flex flex-wrap gap-6 md:gap-16  font-display mb-8  justify-center ">
+        <div className="flex flex-col  md:flex-row items-center gap-6 md:gap-16  font-display mb-8  justify-center ">
+          <div className="border-b border-gray-200  w-85 flex justify-center md:hidden " />
           {tabs.map((tab) => (
+            <>
             <div
               key={tab.id}
               className="relative pb-4 cursor-pointer"
@@ -51,19 +53,21 @@ const Features = () => {
 
               {/* Animated indicator */}
               <div
-                className={`absolute -bottom-8 left-0 h-1 bg-Red-400 rounded transition-all duration-300 ${
+                className={`absolute -bottom-6 md:-bottom-8 left-0 h-1 bg-Red-400 rounded transition-all duration-300 ${
                   activeTab === tab.id ? "w-full opacity-100" : "w-0 opacity-0"
                 }`}
               />
             </div>
+            <div className="border-b border-gray-200 w-85 flex justify-center md:hidden"></div>
+          </>
           ))}
         </div>
-        <div className="w-full flex justify-center ">
+        <div className="w-full md:flex justify-center hidden">
           <div className="border-b border-gray-200  w-148 flex justify-center " />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center gap-8 pb-20">
-        <div className="flex-1 relative intersect:motion-preset-slide-right ">
+      <div className="flex flex-col md:flex-row items-center gap-8 pb-20">
+        <div className="flex-1  relative intersect:motion-preset-slide-right ">
           <div className="relative z-10">
             <div
               className={`transition-all duration-500 ${
@@ -74,7 +78,7 @@ const Features = () => {
                 <img
                   src="/src/assets/images/illustration-features-tab-1.svg"
                   alt="Simple Bookmarking"
-                  className="w-full max-w-md mx-auto"
+                  className="w-full max-w-md  mx-auto"
                 />
               )}
               {activeTab === "speedy" && (
@@ -91,12 +95,12 @@ const Features = () => {
                   className="w-full max-w-md mx-auto"
                 />
               )}
-              <div className="absolute -bottom-15 -left-10 w-120 h-70 bg-Blue-600 rounded-e-full -z-10" />
+              <div className="absolute -bottom-10 w-80 h-57 -left-4 lg:-bottom-15 lg:-left-10 md:w-82 xl:w-120 lg:w-113  sm:w-80 sm:-bottom-10 sm:-left-4  sm:h-53 lg:h-70 bg-Blue-600 rounded-e-full -z-10" />
             </div>
           </div>
         </div>
-        <div className="flex-1 intersect:motion-preset-slide-left ">
-          <div className="text-center lg:text-left">
+        <div className="flex-1 intersect:motion-preset-slide-left mt-15 md:mt-0">
+          <div className="text-center lg:text-left max-w-2xl ">
             <div
               className={`transition-all duration-500  ${
                 isAnimating

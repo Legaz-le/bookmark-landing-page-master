@@ -1,7 +1,7 @@
 const Pricing = () => {
   return (
     <section className="flex-col flex items-center justify-center pt-30 pb-20 ">
-      <div className="max-w-2xl px-15 text-center mb-12 intersect:motion-preset-slide-up intersect:delay-300">
+      <div className="max-w-2xl md:px-15 text-center mb-12 intersect:motion-preset-slide-up intersect:delay-300">
         <h2 className="text-3xl  font-display mb-4 font-[500] text-Blue-950">
           Download the extension
         </h2>
