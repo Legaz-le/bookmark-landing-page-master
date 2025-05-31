@@ -51,7 +51,7 @@ const Features = () => {
                 {tab.label}
               </span>
 
-              {/* Animated indicator */}
+           
               <div
                 className={`absolute -bottom-6 md:-bottom-8 left-0 h-1 bg-Red-400 rounded transition-all duration-300 ${
                   activeTab === tab.id ? "w-full opacity-100" : "w-0 opacity-0"

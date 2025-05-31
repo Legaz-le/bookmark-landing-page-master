@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const FaqSection = () => {
-  // Fix the state type to allow string or null
   const [activeItem, setActiveItem] = useState<string | null>(null);
 
   const faqItems = [
@@ -45,7 +44,7 @@ const FaqSection = () => {
       />
       {faqItems.map((item) => (
         <div className="mb-1">
-          {/* Accordion Header */}
+        
           <div
             className="flex justify-between items-center py-4 cursor-pointer"
             onClick={() => toggleItem(item.id)}
@@ -73,7 +72,7 @@ const FaqSection = () => {
             </svg>
           </div>
 
-          {/* Accordion Content */}
+
           <div
             className={`overflow-hidden transition-all duration-300 ${
               activeItem === item.id
@@ -86,7 +85,6 @@ const FaqSection = () => {
             </p>
           </div>
 
-          {/* Divider */}
           <div
             className="border-b border-gray-200 w-full"
             data-intersect
