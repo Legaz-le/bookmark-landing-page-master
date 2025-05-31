@@ -76,21 +76,21 @@ const Features = () => {
             >
               {activeTab === "simple" && (
                 <img
-                  src="/src/assets/images/illustration-features-tab-1.svg"
+                  src="/images/illustration-features-tab-1.svg"
                   alt="Simple Bookmarking"
                   className="w-full max-w-md  mx-auto"
                 />
               )}
               {activeTab === "speedy" && (
                 <img
-                  src="/src/assets/images/illustration-features-tab-2.svg"
+                  src="/images/illustration-features-tab-2.svg"
                   alt="Speedy Searching"
                   className="w-full max-w-md mx-auto"
                 />
               )}
               {activeTab === "easy" && (
                 <img
-                  src="/src/assets/images/illustration-features-tab-3.svg"
+                  src="/images/illustration-features-tab-3.svg"
                   alt="Easy Searching"
                   className="w-full max-w-md mx-auto"
                 />

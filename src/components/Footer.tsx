@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 flex justify-between items-center mt-10">
         <div className="flex items-center">
           <img
-            src="/src/assets/images/svgviewer-output.svg"
+            src="/images/svgviewer-output.svg"
             alt="logo-bookmark"
           />
           <nav className="hidden md:flex gap-8 ml-10 ">

@@ -16,14 +16,14 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({ isOpen, onClose }) => {
         <div className="flex justify-between items-center mb-16 ">
           <div className="flex items-center">
             <img
-              src="/src/assets/images/mobile-bookmark.svg"
+              src="/images/mobile-bookmark.svg"
               alt="logo-bookmark"
               className="w-40"
             />
           </div>
           <button onClick={onClose}>
             <img 
-              src="/src/assets/images/icon-close.svg" 
+              src="/images/icon-close.svg" 
               alt="close-icon" 
               className="w-6 h-6"
             />

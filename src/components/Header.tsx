@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="sm:overflow-hidden md:overflow-visible">
       <nav className="flex justify-between items-center mt-7 mb-20 lg:pr-30">
-        <img src="/src/assets/images/logo-bookmark.svg" alt="logo-bookmark" />
+        <img src="/images/logo-bookmark.svg" alt="logo-bookmark" />
         <button className="md:hidden" onClick={toggleNavbar}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-blue-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -48,7 +48,7 @@ const Header = () => {
           </div>
         </div>
         <div className="flex-1 relative  intersect:motion-preset-slide-left intersect:delay-100 ">
-        <img src="/src/assets/images/illustration-hero.svg" alt="hero" className="w-full  max-w-md mx-auto"/>
+        <img src="/images/illustration-hero.svg" alt="hero" className="w-full  max-w-md mx-auto"/>
         <div className="absolute -bottom-2 w-75 h-55 -right-4 sm:-bottom-3 sm:-right-4 sm:w-72 sm:h-50  lg:-right-10 xl:-right-0  md:w-75 lg:w-106 xl:w-105  lg:h-65 bg-Blue-600 rounded-s-full -z-10"/>
         </div>
       </section>
